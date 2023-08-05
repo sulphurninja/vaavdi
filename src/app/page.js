@@ -13,7 +13,7 @@ export default function Home() {
       </div>
       <Featured  />
 
-      <div className='p-4 font-cool text-4xl text-center mt-4 mb-4 text-[#4F200D]'>
+      <div id='blogs' className='p-4 font-cool text-4xl text-center mt-4 mb-4 text-[#4F200D]'>
         <h1 className='hover:text-orange-500 ml-4  cursor-pointer'>All Posts</h1>
       </div>
       <BlogFeed />
