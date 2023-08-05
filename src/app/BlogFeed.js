@@ -4,7 +4,7 @@ import { AiOutlineCalendar} from 'react-icons/ai'
 import Link from 'next/link';
 
 async function getData() {
-  const res = await fetch(`/api/blogs`, {
+  const res = await fetch('/api/blogs', {
     cache: "no-store",
   });
   if (!res.ok) {
