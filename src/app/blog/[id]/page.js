@@ -2,7 +2,7 @@ import React from 'react'
 import { FiEye } from 'react-icons/fi';
 
 async function getData(id) {
-    const res = await fetch(`http://localhost:3000/api/blogs/${id}`, {
+    const res = await fetch(`/api/blogs/${id}`, {
         cache: "no-store",
     });
     if (!res.ok) {
