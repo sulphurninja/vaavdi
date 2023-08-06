@@ -33,6 +33,11 @@ const BlogPostSchema = new mongoose.Schema({
     type: Number,
     default: 0,
   },
+  slug: {
+    type: String,
+    required: true,
+    unique: true
+  },
 });
 
 export default mongoose.models.BlogPost || mongoose.model('BlogPost', BlogPostSchema);

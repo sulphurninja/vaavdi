@@ -1,11 +1,10 @@
+import { fetchBlogPost } from '@/lib/actions/blog.actions';
 import React from 'react'
 import { FiEye } from 'react-icons/fi';
 
 async function getData(id) {
-    const res = await fetch(`/api/blogs/${id}`, {
-        cache: "no-store",
-    });
-    if (!res.ok) {
+    const res = await fetchBlogPost({params: {id}});
+    if (res.status !== 200) {
         throw new Error("Failed to fetch posts");
     }
     return res.json();

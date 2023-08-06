@@ -23,11 +23,11 @@ export default function Header() {
 
             {/*middle */}
             <nav className='hidden md:inline-flex font-cool  text-xl justify-evenly  my-auto'>
-                <Link href='#blogs'>
+                <Link href='/#blogs'>
                     <h1 className='cursor-pointer text-black hover:text-orange-400'>Blogs</h1>
 
                 </Link>
-                <Link href='#about'>
+                <Link href='/#about'>
                     <h1 className='cursor-pointer text-black hover:text-orange-400'>About</h1>
                 </Link>
                 <h1 className='cursor-pointer text-white bg-orange-500 px-4  rounded-2xl hover:text-white  hover:bg-green-400'>Follow</h1>
