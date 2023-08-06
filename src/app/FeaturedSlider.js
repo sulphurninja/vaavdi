@@ -2,16 +2,15 @@ import React from 'react'
 import { FiUser } from 'react-icons/fi'
 import { AiOutlineCalendar } from 'react-icons/ai'
 import Link from 'next/link';
+import { fetchBlogs } from '@/lib/actions/blog.actions';
 
 async function getData() {
-    const res = await fetch("http://localhost:3000/api/blogs", {
-        cache: "no-store",
-    });
+    const res = await fetchBlogs();
     if (!res.ok) {
-        throw new Error("Failed to fetch posts");
+      throw new Error("Failed to fetch posts");
     }
     return res.json();
-}
+  }
 
 const formatDate = (dateString) => {
     const date = new Date(dateString);
