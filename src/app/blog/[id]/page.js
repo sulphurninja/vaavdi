@@ -3,11 +3,12 @@ import React from 'react'
 import { FiEye } from 'react-icons/fi';
 
 async function getData(id) {
-    const res = await fetchBlogPost({params: {id}});
-    if (res.status !== 200) {
-        throw new Error("Failed to fetch posts");
-    }
-    return res.json();
+    try{
+        const res = await fetchBlogPost({ params: { id } });
+        return res.json();
+    }catch(error){
+        console.log(error, "THE ERROR?");
+    } 
 }
 
 export default async function BlogPost({ params }) {

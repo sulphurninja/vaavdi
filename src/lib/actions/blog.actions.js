@@ -15,15 +15,15 @@ export async function fetchBlogs() {
     }
 }
 
-export async function fetchBlogPost({params}){
-    const {id} = params;
+export async function fetchBlogPost({ params }) {
+    const { id } = params;
     try {
         await connectDb();
         const posts = await BlogPost.findById(id); // Sort by 'date' field in descending order
+        console.log(posts, "NOWWWW")
         posts.views += 1;
         await posts.save();
-    
-      
+        console.log(JSON.stringify(posts), "WHATS THE ISSUE?!");
         return new NextResponse(JSON.stringify(posts), { status: 200 });
     } catch (err) {
         return new NextResponse('Database Error', { status: 500 });

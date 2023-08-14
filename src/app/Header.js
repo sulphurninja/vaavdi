@@ -12,10 +12,11 @@ export default function Header() {
                         src="/logo.png"
                         height={80}
                         width={80}
+                        className='p-5'
                     />
                 </Link>
                 <a className='my-auto cursor-pointer  md:text-2xl font-bold text-orange-500 hover:text-orange-700 '>
-                    <h1 className=''>Maratha Club</h1>
+                    <h1 className='font-cool my-auto'>Maratha Club</h1>
 
                 </a>
 
